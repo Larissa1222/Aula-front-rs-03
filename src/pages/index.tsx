@@ -45,7 +45,7 @@ export default function Home({ product }: HomeProps) {
 export const getStaticProps: GetStaticProps = async () => {
   //acessa o stripe.ts que acessa usando o .env.local
   //q consegue acessar o preço do produto com retrieve
-  const price = await stripe.prices.retrieve('price_1IikQyKb2D5kXJ0ndL3gqzBZ')
+  const price = await stripe.prices.retrieve('price_1Il0F8Kb2D5kXJ0nDAQkfQ1J')
   const product = {
     priceId: price.id,
     amount: new Intl.NumberFormat('en-US', {
